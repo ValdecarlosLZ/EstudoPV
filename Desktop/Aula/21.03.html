@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>isso ai</title>
+    <style>
+        .menu {
+            border: 1px solid black;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 15%;
+        }
+        
+        .menu li {
+            display: inline;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .menu li:hover {
+            background-color: cadetblue;
+        }
+        
+        header {
+            background: rgb(36, 163, 248);
+            height: 40px;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .box {
+            border-radius: 5px;
+            background-color: aqua;
+            padding: 10px;
+        }
+        
+        @media(max-width: 400px) {
+            header {
+                height: 40px;
+                background-color: aquamarine;
+            }
+            .menu {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a target="_blank" href="https://universoxmen.com.br/2020/08/10-melhores-jogos-de-videogame/"> Início</a></li>
+                <li>
+                    <a target="_blank" href="https://www.crunchyroll.com/pt-br/welcome?utm_source=paid_cr&amp;utm_medium=google-search&amp;utm_campaign=conversion&amp;utm_term=crunchyroll&amp;referrer=paid_cr_google-search_conversion&amp;gclid=CjwKCAjwxOCRBhA8EiwA0X8hiytGhQNRy5S3i6dpiJ84BSwvwiQmFLvemxnrVZZslZ7tYV7lY2SgJhoC2koQAvD_BwE"> Produtos</a></li>
+                <li>
+                    <a target="_blank" href="https://www.olaclick.com/?lang=pt&amp;gclid=CjwKCAjwxOCRBhA8EiwA0X8hi_BEWnT-V_JDhVEkpCthh11PiazAKcZIpoNwZgS32Nmw4gbLWaCEyhoCi4MQAvD_BwE">Serviços</a></li>
+                <li>
+                    <a target="_blank" href="https://web.whatsapp.com/">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="grid">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+        <div class="box h">H</div>
+
+    </div>
+</body>
+
+</html>

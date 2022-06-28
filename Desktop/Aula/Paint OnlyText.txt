@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paint onlytext</title>
+
+    <style>
+        #nome {
+            color: purple;
+            background-color: #191919;
+        }
+        
+        #fontes {
+            background: none;
+        }
+        
+        #tablet {
+            height: 320px;
+            width: 80%;
+        }
+        
+        #tablet2 {
+            width: 30%;
+            height: 270px;
+        }
+        
+        #fim {
+            display: block;
+            width: 55%;
+            height: 290px;
+            margin-left: 40%;
+            margin-top: -320px;
+        }
+        
+        #test {
+            width: 100%;
+            height: 225px;
+            margin-top: 10px;
+        }
+        
+        #ok {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="nome">Paint OnlyText</h1>
+    <fieldset id="tablet">
+        <header>
+            <fieldset id="tablet2">
+                <select id="tamanhos" onchange="tamanho()">
+                <option value="normal">Normal</option>
+                <option value="little">Pequeno</option>  
+                <option value="upper">Grande</option>
+            </select>
+                <select id="cor" onchange="alterar()">
+                <option value="branco">Branco</option>
+                <option value="vermelho">Vermelho</option>
+            </select>
+                <input type="color" id="cores" onchange="alterar()">
+                <button id="italico"><i>I</i></button>
+                <button id="negrito"><b>N</b></button>
+
+                <textarea name="teste" id="test" cols="30" rows="10"></textarea>
+
+            </fieldset>
+
+        </header>
+        <button onclick="executar()" id="ok">Executar</button>
+        <fieldset id="fim">
+            <span id="resultado"></span>
+        </fieldset>
+    </fieldset>
+    <script>
+        function alterar() {
+            if (cor.value === 'branco')
+                document.getElementById("nome").style.color = "purple";
+            document.getElementById("nome").style.background = "#191919";
+            document.getElementById("nome").style.padding = 0;
+            document.getElementById("nome").style.margin = 0;
+        }
+
+        function tamanho() {
+            console.log("mudando");
+            if (tamanhos.value === 'little') {
+                document.getElementById("resultado").style.fontSize = "0.5em";
+            } else if (tamanhos.value === 'upper') {
+                document.getElementById("resultado").style.fontSize = "2em";
+            } else if (tamanhos.value === 'normal') {
+
+                document.getElementById("resultado").style.fontSize = "1em";
+
+            }
+        }
+
+        function executar() {
+            console.log(test.value);
+            resultado.innerHTML = test.value;
+
+        }
+    </script>
+
+
+</body>
+
+</html>

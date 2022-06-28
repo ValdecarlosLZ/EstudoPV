@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paint onlytext</title>
+
+    <style>
+        #nome {
+            color: purple;
+            background-color: #191919;
+        }
+        
+        #fontes {
+            background: none;
+        }
+        
+        #tablet {
+            height: 320px;
+            width: 80%;
+            background-color: rgb(42, 4, 42);
+        }
+        
+        #tablet2 {
+            width: 30%;
+            height: 270px;
+        }
+        
+        #fim {
+            display: block;
+            width: 55%;
+            height: 290px;
+            margin-left: 40%;
+            margin-top: -320px;
+        }
+        
+        #test {
+            width: 100%;
+            height: 225px;
+            margin-top: 10px;
+        }
+        
+        #ok {
+            margin-top: 10px;
+        }
+        
+        body {
+            background-color: #1919191c;
+        }
+        
+        #fim {
+            background-color: white;
+        }
+        
+        #underline {
+            text-decoration: underline;
+        }
+        
+        .coisas {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="nome">Paint OnlyText</h1>
+    <fieldset id="tablet">
+        <header>
+            <fieldset id="tablet2">
+                <select id="tamanhos" onchange="tamanho()">
+                <option value="normal">Normal</option>
+                <option value="little">Pequeno</option>  
+                <option value="upper">Grande</option>
+            </select>
+                <select id="cores" onchange="mudar()">
+                <option value="preto">Preto</option>
+                <option value="branco">Branco</option>
+                <option value="vermelho">Vermelho</option>
+                <option value="amarelo">Amarelo</option>
+                <option value="laranja">Laranja</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+            </select>
+
+                <button class="coisas" id="italico" onclick="italico()"><strong><i>i</i></strong></button>
+                <button class="coisas" id="negrito" onclick="negrito()"><b>N</b></button>
+                <button class="coisas" id="underline" onclick="underline()"><strong>U</strong></button>
+
+                <textarea name="teste" id="test" cols="30" rows="10"></textarea>
+
+            </fieldset>
+
+        </header>
+        <button onclick="executar()" id="ok">Executar</button>
+        <fieldset id="fim">
+            <span id="resultado"></span>
+        </fieldset>
+    </fieldset>
+    <script>
+        function mudar() {
+            console.log("cores")
+            if (cores.value === 'preto') {
+                document.getElementById("resultado").style.color = "black";
+            } else if (cores.value === 'branco') {
+                document.getElementById("resultado").style.color = "white";
+            } else if (cores.value === 'vermelho') {
+                document.getElementById("resultado").style.color = "red";
+            } else if (cores.value === 'amarelo') {
+                document.getElementById("resultado").style.color = "yellow";
+            } else if (cores.value === 'laranja') {
+                document.getElementById("resultado").style.color = "orange";
+            } else if (cores.value === 'verde') {
+                document.getElementById("resultado").style.color = "green";
+            } else if (cores.value === 'azul') {
+                document.getElementById("resultado").style.color = "blue";
+            }
+
+        }
+
+        function italico() {
+            console.log("i")
+            document.getElementById("resultado").style.fontStyle = "italic";
+            if (italico.value === 'italic') {
+                document.getElementById("resultado").style.fontStyle = "normal";
+            }
+        }
+
+        function negrito() {
+            console.log("n")
+            document.getElementById("resultado").style.fontWeight = "bold";
+            if (negrito.value === 'bold') {
+                document.getElementById("resultado").style.fontWeight = "normal";
+            }
+        }
+
+        function underline() {
+            console.log("u")
+            document.getElementById("resultado").style.textDecoration = "underline";
+            if (underline.value === 'underline') {
+                document.getElementById("resultado").style.textDecoration = "normal";
+            }
+        }
+
+        function tamanho() {
+            console.log("mudando");
+            if (tamanhos.value === 'little') {
+                document.getElementById("resultado").style.fontSize = "0.5em";
+            } else if (tamanhos.value === 'upper') {
+                document.getElementById("resultado").style.fontSize = "2em";
+            } else if (tamanhos.value === 'normal') {
+
+                document.getElementById("resultado").style.fontSize = "1em";
+
+            }
+        }
+
+        function executar() {
+            console.log(test.value);
+            resultado.innerHTML = test.value;
+
+        }
+    </script>
+
+
+</body>
+
+</html>

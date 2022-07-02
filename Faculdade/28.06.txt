@@ -1,0 +1,68 @@
+CREATE TABLE Premiacao (
+idPremiacao Bigint constraint PK_idPremiacao PRIMARY KEY,
+Nome VARCHAR(45),
+Ano Bigint );
+
+CREATE TABLE Genero (
+idGenero Bigint constraint PK_idGenero PRIMARY KEY,
+Nome VARCHAR(45));
+
+CREATE TABLE Diretor (
+idDiretor Bigint constraint Pk_idDiretor PRIMARY KEY,
+Nome VARCHAR(45));
+
+CREATE TABLE Filme (
+IdFilme Bigint constraint Pk_IdFilme PRIMARY KEY,
+NomeBR VARCHAR(45),
+NomeEN VARCHAR(45),
+AnoLancamento Bigint,
+Sinopse TEXT,
+Diretor_IdDiretor Bigint,
+Genero_IdGenero Bigint,
+FOREIGN KEY (Diretor_IdDiretor) REFERENCES Diretor (IdDiretor),
+FOREIGN KEY (Genero_IdGenero) REFERENCES Genero (IdGenero));
+
+
+CREATE TABLE Filme_Has_Premiacao (
+idFHP Bigint NOT NULL,
+Ganhou BOOL,
+Premiacao_IdPremiacao bigint NOT NULL,
+Filme_IdFilme Bigint NOT NULL,
+PRIMARY KEY (Premiacao_IdPremiacao,Filme_IdFilme,idFHP)
+);
+
+CREATE TABLE Funcao (
+IdFuncao bigint Constraint PK_IdFuncao PRIMARY KEY,
+Nome VARCHAR(45));
+
+CREATE TABLE Funcionario (
+IdFuncionario Bigint Constraint PK_IdFuncionario PRIMARY KEY,
+Nome VARCHAR(45),
+CarteiraTrabalho Bigint,
+DataContratacao DATE,
+Salario Float);
+
+CREATE TABLE Horario (
+IdHorario Bigint Constraint PK_IdHorario PRIMARY KEY,
+Horario TIME);
+
+CREATE TABLE Sala (
+IdSala Bigint Constraint Pk_IdSala PRIMARY KEY,
+Nome VARCHAR(45),
+Capacidade Bigint);
+
+CREATE TABLE Horario_Trabalho_Funcionario (
+Horario_IdHorario Bigint NOT NULL,
+Funcionario_IdFuncionario Bigint NOT NULL,
+Funcao_IdFuncao Bigint,
+	PRIMARY KEY (Horario_IdHorario,Funcionario_IdFuncionario),
+FOREIGN KEY (Funcao_IdFuncao) REFERENCES Funcao (IdFuncao));
+
+CREATE TABLE Filme_Exibido_Sala (
+Filme_idFilme Bigint NOT NULL,
+Sala_IdSala Bigint NOT NULL,
+Horario_IdHorario Bigint NOT NULL,	
+PRIMARY KEY (Filme_idFilme,Sala_IdSala,Horario_IdHorario));
+
+
+

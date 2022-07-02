@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mais mais</title>
+
+</head>
+
+<body>
+    <h3 id="testa">Cabeca</h3>
+    <p><input type="text" id="nome" placeholder="Insira seu nome" /></p>
+    <p><input type="email" id="email" placeholder="Utilize com um email válido" /></p>
+    <p><input type="button" value="Crica" onclick="Crica();" id="Crica" /></p>
+
+    <script>
+        console.log("Olá humano");
+
+        function Crica() {
+            //var nome = prompt("Insira seu nome ...");
+            //alert("Um momento Senhor(a) " + nome);
+            //document.write("<h2> Ainda está esperando aqui seu troxa <h2> ");
+            var testa =
+                document.getElementById("testa");
+            console.log(testa.innerText);
+            var nome = document.getElementById("nome");
+            var email = document.getElementById("email");
+            console.log(nome.value);
+            console.log(email.value);
+            if (nome.value === "" || email.value) {
+                alert("Preencha os campos vazios");
+            }
+        }
+    </script>
+</body>
+
+</html>

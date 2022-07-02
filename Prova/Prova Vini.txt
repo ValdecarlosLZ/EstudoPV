@@ -1,0 +1,113 @@
+Prova Vinicius
+
+01)---------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+    float reais, dolar, euro, vld, vle;
+
+    printf("Insira o valor em reais: ");
+    scanf("%f",&reais);
+    
+	dolar = 5.08;
+    euro = 6.67;
+    
+    
+    printf("%f \n",reais / dolar );
+    printf("%f \n",reais / euro );
+
+    return 0;
+}
+
+02)---------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    int a = 0;
+    int b = 50;
+
+    while (a < 50) {
+        a++;
+        if (a % 2 == 0) {
+            printf("Par: ", a ,"\n");
+        }
+    }
+
+    while (b < 100)
+    {
+        b++;
+        if (b % 2 == 1) {
+            printf("Impar: " , b ,"\n");
+        }
+    }
+
+    return 0;
+
+}
+03)---------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+
+int main(void){
+	
+char buffer ="aigrenis";
+size_t size = string(buffer);
+
+for (int i = 0; i < size /2; i++){
+	char ini = buffer[i];
+	buffer[i] = buffer[size - i - 1];
+	buffer[size - i - 1] = ini; 
+}
+	printf("%s", buffer);
+}
+04)---------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	
+	float total, tx, bv, kw;
+	
+	tx == 18.00;
+	bv == 24.00;
+	
+	printf("Insira os Kw/H: ");
+	scanf("%f \n", kw);
+	
+	total = (tx + (kw * 0.12) + bv);
+	
+	printf("%f \n ",total);
+	
+	return 0;
+}
+
+05)---------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    int a;
+
+    printf("insira sua idade: ");
+    scanf("%i",a);
+
+    if (a >= 60) {
+
+        printf("Parábens você tem direito a gratuidade de Transporte público");
+
+    }
+
+    else {
+
+        printf("Pena você nao tem direito a gratuidade do Transporte público");
+
+    }
+
+    return 0;
+
+}

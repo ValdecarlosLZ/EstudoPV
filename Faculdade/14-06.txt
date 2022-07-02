@@ -1,0 +1,34 @@
+CREATE TABLE Regiao(
+id_Regiao BIGINT constraint pk_id_Regiao PRIMARY KEY,
+Nome VARCHAR(40));
+
+CREATE TABLE Vendedor(
+idvendedor BIGINT constraint pk_idvendedor PRIMARY KEY);
+
+CREATE TABLE Cliente(
+id_Cliente BIGINT constraint pk_id_Cliente PRIMARY KEY,
+Nome VARCHAR(40),
+idvendedor BIGINT,
+FOREIGN KEY (idvendedor) REFERENCES vendedor (idvendedor));	
+
+CREATE TABLE Departamento(
+id_departamento BIGINT constraint pk_id_departamento PRIMARY KEY,
+Nome VARCHAR(40),
+id_regiao BIGINT,
+FOREIGN KEY (id_regiao) REFERENCES regiao (id_Regiao));
+
+CREATE TABLE Gerente(
+id_gerente BIGINT constraint pk_id_gerente PRIMARY KEY);
+
+CREATE TABLE Empregado(
+id_empregado BIGINT constraint pk_id_empregado PRIMARY KEY,
+Prim_Nome VARCHAR(20),
+Ult_Nome VARCHAR(20),
+Cargo VARCHAR(30),
+Salario BIGINT,
+Dt_admissao DATE,
+CPF CHAR(11),
+id_departamento BIGINT,
+id_gerente BIGINT,
+FOREIGN KEY (id_departamento) REFERENCES Departamento (id_departamento)
+);

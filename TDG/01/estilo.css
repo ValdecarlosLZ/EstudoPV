@@ -1,0 +1,232 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background: rgb(0, 0, 0);
+
+
+}
+
+
+.conteudo {
+
+    position: relative;
+    padding: 15px;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: -30px;
+
+
+}
+
+.galeria {
+
+    display: relative;
+    flex-flow: row nowrap;
+    gap: 5px;
+
+
+}
+
+h1,
+span {
+    margin-top: 10px;
+    display: flex;
+    color: rgb(250, 247, 244);
+    justify-content: center;
+    margin-bottom: -10px;
+
+
+}
+
+.nd {
+    position: absolute;
+}
+
+.slides {
+
+    overflow-x: auto;
+
+}
+
+input {
+
+    position: absolute;
+    justify-items: center;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: transparent;
+    border: transparent;
+
+
+}
+
+.botaod {
+    left: auto;
+    right: -40px;
+
+}
+
+.botaoes {
+
+    right: auto;
+    left: -50px;
+  
+
+
+
+}
+
+.botaod,
+.botaoes {
+
+    margin-top: 200px;
+    color: aliceblue;
+
+
+}
+
+.botaod:hover {
+
+    text-shadow: 2px 5px 1px rgb(245, 1, 1);
+
+}
+
+.botaoes:hover {
+
+    text-shadow: 2px 5px 1px rgb(245, 1, 1);
+
+}
+
+.imagatual {
+
+    height: 510px;
+    flex-shrink: 0;
+    opacity: 0.6;
+
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.hyy {
+
+    opacity: 0;
+
+}
+
+/* Parte do menu que sobe e desce */
+.drop_menu ul {
+
+    list-style-type: none;
+    padding: 0;
+}
+
+.drop_menu ul li {
+
+    display: inline;
+    position: relative;
+
+}
+
+.drop_menu ul li a {
+    display: inline-block;
+    color: rgb(252, 252, 253);
+    text-decoration: none;
+    padding: 10px;
+
+
+}
+
+.drop_menu ul li a:hover {
+
+    width: 100;
+    background-color: rgb(19, 19, 19);
+}
+
+
+.drop_menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.drop_menu ul li:hover ul {
+
+    display: block;
+
+}
+
+.drop_menu ul ul {
+    width: 150px;
+}
+
+.drop_menu ul ul li {
+    display: block;
+}
+
+/* mari*/
+
+#mari {
+
+    width: 75px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+
+}
+
+/*LOGO*/
+@font-face {
+
+    font-family: mine;
+    src: url(/Atividade_avaliativa/01/fonte/Gloss_And_Bloom.ttf);
+
+
+}
+
+#fild {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    right: -100px;
+    left: 100px;
+}
+
+
+
+#logo {
+    font-size: 30px;
+    display: flex;
+    font-family: mine;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+#logo:hover {
+
+    color: rgb(245, 1, 1)
+}
+
+
+
+
+#logo11 {
+    background-size: cover;
+    background-image: url(/Atividade_avaliativa/01/immg/fundofundo.jpg)
+    
+}

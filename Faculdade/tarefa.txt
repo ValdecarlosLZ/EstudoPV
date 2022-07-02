@@ -1,0 +1,21 @@
+1)  select placa, nome
+from veiculo
+inner join cliente on veiculo.cpf = cliente.cpf
+
+
+2)  select cliente.nome, veiculo.cpf
+from veiculo
+inner join cliente on veiculo.cpf = cliente.cpf
+where cor = 'Preto' or cor = 'Branco'
+
+3) select veiculo.cor,estacionamento.placa
+from veiculo
+inner join estacionamento on veiculo.placa = estacionamento.placa
+where num = 1
+
+4)select veiculo.placa,anoF,desc_2
+from veiculo
+inner join modelo on veiculo.idmod = modelo.idmod
+where anoFm >= '1999'
+
+5)select co

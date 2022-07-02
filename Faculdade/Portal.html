@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portal do Aluno</title>
+    <style>
+        #conteudo {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .ativo {
+            background-color: rgb(90, 3, 141);
+            display: block;
+            color: aquamarine;
+            position: relative;
+        }
+        
+        .inativo {
+            background-color: white;
+            color: whitesmoke;
+            /*display: none;*/
+            position: relative;
+            animation: mymove 5s;
+            -webkit-animation: mymove 5s;
+            -moz-animation: mymove 5s;
+            animation-iteration-count: 1;
+        }
+        
+        @keyframes mymove {
+            from {
+                top: 0px;
+            }
+            to {
+                top: 200px;
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <button onclick="inicio()"> Inicio </button>
+        <button onclick="service()"> Serviço </button>
+        <div id="conteudo">
+            <div id="inicio_conteudo" class="inativo">
+                <h2>Inicio</h2>
+            </div>
+            <div id="servico_conteudo" class="inativo">
+                <h2>Serviço</h2>
+            </div>
+        </div>
+    </header>
+    <script>
+        function inicio() {
+            console.log("Loading...");
+            inicio_conteudo.classList.add("ativo");
+            inicio_conteudo.classList.remove("inativo");
+            servico_conteudo.classList.remove("ativo");
+            servico_conteudo.classList.add("inativo");
+        }
+
+        function service() {
+            console.log("serviu");
+            servico_conteudo.classList.add("ativo");
+            servico_conteudo.classList.remove("inativo");
+            inicio_conteudo.classList.remove("ativo");
+            inicio_conteudo.classList.add("inativo");
+
+        }
+    </script>
+    <script>
+        let lista = [];
+        lista[5] = 100;
+        lista[3] = "Creito";
+        lista.push("Baltasar");
+        lista.push()
+    </script>
+</body>
+
+</html>

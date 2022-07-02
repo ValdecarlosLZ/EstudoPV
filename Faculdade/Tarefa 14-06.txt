@@ -1,0 +1,22 @@
+1)   insert into Regiao (id_regiao,Nome) values (1,'Norte');
+     insert into Regiao (id_regiao,Nome) values (2,'Sul');
+
+2)   insert into Departamento (id_departamento,Nome,id_regiao) values (10,'Administrativo',1);
+     insert into Departamento (id_departamento,Nome,id_regiao) values (20,'Vendas',1);
+     insert into Departamento (id_departamento,Nome,id_regiao) values (30,'Compras',2);
+
+3)insert into Empregado (id_empregado,Prim_Nome,Ult_Nome,cargo,salario,dt_admissao,CPF,id_Departamento) values (1,'Carmen','Velasques','Presidente',29500,'2009-05-05','34567890125',10);
+  insert into Empregado (id_empregado,Prim_Nome,Ult_Nome,cargo,salario,dt_admissao,CPF,id_Departamento,id_gerente) values (2,'Lauro','Neves','Diretor de compras',19500,'2009-03-03','23456789012',30,1);
+  insert into Empregado (id_empregado,Prim_Nome,Ult_Nome,cargo,salario,dt_admissao,CPF,id_Departamento,id_gerente) values (3,'Ernante','Nogueira','Diretor de vendas',18000,'2010-04-07','3456780123',20,1);
+  insert into Empregado (id_empregado,Prim_Nome,Ult_Nome,cargo,salario,dt_admissao,CPF,id_Departamento,id_gerente) values (4,'Mark','Queiroz','Gerente de compras',8000,'2010-11-11','12345432123',30,2);
+  insert into Empregado (id_empregado,Prim_Nome,Ult_Nome,cargo,salario,dt_admissao,CPF,id_Departamento,id_gerente) values (5,'Alberto','Rodrigues','Vendedor',4000,'2008-10-10','87965432123',20,3);
+  insert into Empregado (id_empregado,Prim_Nome,Ult_Nome,cargo,salario,dt_admissao,CPF,id_Departamento,id_gerente) values (6,'Marlene','Ugarte','Vendedor',3500,'2009-03-03','87654345678',20,3);
+
+4)insert into Cliente (id_cliente,Nome,Idvendedor) values (110,'Ponta Quente',5);
+ insert into Cliente (id_cliente,Nome,Idvendedor) values (120,'Casa Supimpa',6);
+ insert into Cliente (id_cliente,Nome,Idvendedor) values (130,'Coisas e Tralhas',5);
+ insert into Cliente (id_cliente,Nome) values (140,'Casa Desconto');
+
+5)select id_cliente
+from cliente
+where nome = 'Ponto Quente'
